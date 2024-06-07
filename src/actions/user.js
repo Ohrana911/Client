@@ -3,7 +3,7 @@ import {setUser} from "../reducers/userReducer";
 
 export const registration = async (email, password) => {
     try {
-        const response = await axios.post(`http://localhost:5000/api/auth/registration`, {
+        const response = await axios.post(`https://kursovayaserver-production.up.railway.app/api/auth/registration`, {
             email,
             password
         })
@@ -16,7 +16,7 @@ export const registration = async (email, password) => {
 export const login =  (email, password) => {
     return async dispatch => {
         try {
-            const response = await axios.post(`http://localhost:5000/api/auth/login`, {
+            const response = await axios.post(`https://kursovayaserver-production.up.railway.app/api/auth/login`, {
                 email,
                 password
             })
@@ -31,7 +31,7 @@ export const login =  (email, password) => {
 export const auth =  () => {
     return async dispatch => {
         try {
-            const response = await axios.get(`http://localhost:5000/api/auth/auth`,
+            const response = await axios.get(`https://kursovayaserver-production.up.railway.app/api/auth/auth`,
                 {headers:{Authorization:`Bearer ${localStorage.getItem('token')}`}}
             )
             dispatch(setUser(response.data.user))
