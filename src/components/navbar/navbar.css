@@ -1,27 +1,51 @@
-
+/* navbar.module.css */
 
 .navbar {
-  display: flex;
-  height: 50px;
-  justify-content: center;
-  background-color: white;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
   width: 100%;
-
-  &__header {
-    margin-left: 10px;
-    font-size: 24px;
-    font-weight: 700;
-    margin-left: 10px;
-  }
-
-  &__login {
-    margin-left: auto;
-    margin-right: 20px;
-  }
 }
 
 .container {
-  width: 1140px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  max-width: 100%; /* изменение */
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.navbar__logo {
+  height: 40px;
+  /* Уберите комментарий и добавьте путь к вашему логотипу */
+  /* background-image: url('./navbar-logo.svg'); */
+  /* background-size: contain; */
+  /* background-repeat: no-repeat; */
+}
+
+.navbar__header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  width: 100%;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: #333333;
+  margin-left: 20px;
+}
+
+.navbar__link:hover {
+  color: #007bff;
+}
+
+.navbar__login {
+  margin-left: auto;
+}
+
+.navbar__registration {
+  margin-left: 20px;
 }
