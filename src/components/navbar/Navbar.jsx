@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="navbar">
             <div className="container">
                 <img alt="" className="navbar__logo"/>
-                <div className="navbar__header">MERN CLOUD</div>
+                <div className="navbar__header">DROPBOX ANALOGUE!</div>
                 {!isAuth && <div className="navbar__login"><NavLink to="/login">Войти</NavLink></div> }
                 {!isAuth && <div className="navbar__registration"><NavLink to="/registration">Регистрация</NavLink></div> }
                 {isAuth && <div className="navbar__login" onClick={() => dispatch(logout()) }>Выход</div> }
